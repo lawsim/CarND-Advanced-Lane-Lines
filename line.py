@@ -1,3 +1,5 @@
+import numpy as np
+
 # Define a class to receive the characteristics of each line detection
 class Line():
     def __init__(self):
@@ -21,3 +23,10 @@ class Line():
         self.allx = None  
         #y values for detected line pixels
         self.ally = None
+
+        # tracking line detection
+        self.lane_inds = []
+        
+        x_pixelpos = None
+        y_pixelpos = None
+        fit = None
